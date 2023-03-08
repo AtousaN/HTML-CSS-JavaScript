@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Warfarin Dosage</title>
+    <style>
+    h1 { 
+      border: 1px solid #680747; 
+      border-radius: 0; 
+      text-align: center; 
+      color: #680747;
+      padding: 20px;
+      margin: 50px 50px 0 50px;
+      border-radius: 30px
+    } 
+    h2 {
+      text-align: center; 
+      color: #6C5B7C;
+    } 
+    img { 
+      display: block; 
+      margin: 0 auto; 
+      max-width: 400px;
+      border-radius: 5px; 
+    }
+    body {
+      color:#d7c2ef;
+      background: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+      min-height: 860px;
+      margin: 50px 50px 0 50px;
+    }
+    p {
+      text-align: justify;
+      line-height: 1.5;
+    }
+    ul {
+      font-weight: 600;
+    }
+    a {
+      color: #c9b0e5;
+      font-size: 14px;
+      text-decoration:none;
+    }
+    button {
+      display: block;
+      margin: 20px auto 30px auto;
+      background: #C06C84;
+      color: #680747;
+      font-size: 20px;
+      padding: 15px 15px;
+      border: 1px solid #C06C84;
+      border-radius: 10px;
+      box-shadow: 10px 10px 0px rgba(0,0,0,0.3);
+      transition: all 200ms ease-in-out;
+    }
+    button:hover {
+      cursor: pointer;
+      opacity: 0.9;
+    }
+    div {
+      text-align: center;
+      margin: 50px auto 30px auto;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>Warfarin Dosage Prediction</h1>
+    <h2>Find your individualized dose range.</h2>
+    <hr />
+    <img
+      src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/070/508/original/warfarin.jpg?1678248497"
+    alt="Warfarin"/>
+    <hr />
+    <p>
+      The safety of anticoagulant administration has been a primary concern of
+      medical research. Among all anticoagulants, warfarin has long been listed
+      among the top ten drugs causing adverse drug events. This oral
+      anticoagulant is widely used as an effective preventative treatment for
+      thromboembolic problems such as strokes and heart attacks. However, it
+      requires individualized dosing that accounts for numerous factors, since
+      slight overdosing or underdosing can have catastrophic or even fatal
+      consequences. Warfarin titration via International Normalized Ratio (INR)
+      monitoring can be challenging due to its narrow therapeutic window and
+      complex individual factor relationships, multiple drugs and food
+      interactions, its long half-life, and the patient's individual response to
+      a given dose, significant side effects. <strong> You can predict the reasonable
+      range of Warfarin dosage in your case, by answering a few questions about your drug, desease, and habit backgrounds: </strong>
+      <ul>
+        <li> Being a current smoker </li>
+        <li> Having diabetes </li>
+        <li> Using Simvastatin </li>
+        <li> Have had Cardiopathy </li>
+        <li> Have had Valve-replacement </li>
+      </ul>
+    </p>
+    <a href="https://scholar.google.com/" target="_blank" />
+      ➡️ Check out the article.
+    </a>
+    <br />
+    <button>
+      <em>Predict your resonable dosage!</em>
+    </button>
+    <div>
+      This page was built by 
+      <span>
+        <em>
+          <a href="mailto:at_nt.1995@yahoo.com" target="_blank">
+            Atousa Nasertork
+          </a>
+        </em>
+      </span>
+    </div>
+    <script>
+      function prediction(){
+        let firstName = prompt("What is your first name?");
+        alert(`Hi, ${firstName}! Please answer the following questions with Y/N:`);
+        let smoker = prompt("Are you currently a smoker?");
+        let diabetes = prompt("Do you have diabetes?");
+        let simvastatin = prompt("Do you use Simvastatin?");
+        let cardiopathy = prompt("Do you have cardiopathy?");
+        let valveReplacement = prompt("Have you replaced your heart valve?");
+        smoker.toUpperCase()
+        diabetes.toUpperCase()
+        simvastatin.toUpperCase()
+        cardiopathy.toUpperCase()
+        valveReplacement.toUpperCase()
+        if (smoker==="Y" && diabetes==="Y") {
+          alert("You should be prescribed at least 30mg per week.")
+        } else {
+          alert("Less than 30mg per week is enough for you.")
+        }
+      }
+      let predictButton=document.querySelector("button");
+      predictButton.addEventListener("click",prediction);
+    </script>
+  </body>
+</html>
